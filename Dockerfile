@@ -20,5 +20,5 @@ RUN git clone -b master https://github.com/nacyot/slack_notifier.git /app
 RUN cd /app; bundle install;
 
 # Run Huboard instance
-EXPOSE 5000
+EXPOSE 4000
 CMD bundle exec foreman start -f /app/Procfile
