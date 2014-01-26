@@ -21,4 +21,5 @@ RUN cd /app; bundle install;
 
 # Run Huboard instance
 EXPOSE 4000
+WORKDIR /app
 CMD bundle exec foreman start -f /app/Procfile
