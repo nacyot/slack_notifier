@@ -15,8 +15,6 @@ gem 'rake'
 
 # Component requirements
 gem 'slim'
-gem 'activerecord', '>= 3.1', :require => 'active_record'
-gem 'sqlite3'
 
 # Test requirements
 gem 'rspec', :group => 'test'
