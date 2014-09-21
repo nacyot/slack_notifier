@@ -1,18 +1,18 @@
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 MAINTAINER Daekwon Kim <propellerheaven@gmail.com>
 
 # Run upgrades
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get update
+RUN apt-get -qq -y dist-upgrade
 
 # Install basic packages
 RUN apt-get -qq -y install git curl build-essential
 
 # Install Ruby 2.0
-RUN apt-get -qq -y install python-software-properties
+RUN apt-get -qq -y install software-properties-common
 RUN apt-add-repository ppa:brightbox/ruby-ng
 RUN apt-get update
-RUN apt-get -qq -y install ruby2.0 ruby2.0-dev
+RUN apt-get -qq -y install ruby2.1 ruby2.1-dev
 RUN gem install bundler --no-ri --no-rdoc
 
 # Install 
